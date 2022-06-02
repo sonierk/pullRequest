@@ -114,6 +114,11 @@ jobs:
         if: success()
         run: |
           echo "Jira Upload Deploy Info response: ${{steps.push_deployment_info_to_jira.outputs.response}}"
+      - name: Comment on issue
+        uses: atlassian/gajira-comment@master
+        with:
+        issue: RKSA-1
+        comment: ${{ github.event.pusher.name }} pushed to repository.
 
 ##   deploy_to_prod:
 #     runs-on: ubuntu-latest
