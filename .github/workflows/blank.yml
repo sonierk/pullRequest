@@ -4,14 +4,14 @@ on:
   push:
     branches:
       - main
-      - release/1.0.0
-#     - feature/*
+      - release
+#    - feature/*
   pull_request:
     branches:
       - bugfix/*
       - feature/*
       - hotfix/*
-      - release/*
+      - release
 
 jobs:
   build_and_test:
