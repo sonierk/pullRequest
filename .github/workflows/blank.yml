@@ -11,7 +11,7 @@ on:
       - bugfix/*
       - feature/*
       - hotfix/*
-      - release/*
+      - release
 
 jobs:
   build_and_test:
